@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AvicoSoft - Gestion de Ferme Avicole</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <link rel="stylesheet" href="/static/css/styles.css">
+  </head>
+  <body class="bg-gray-50">
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm bg-gradient-to-r from-white to-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="static/images/logoavico.jpg" alt="AvicoSoft Logo" class="h-10 w-auto rounded-lg shadow-md" />
+                </a>
+                <span class="text-xl font-bold text-gray-800">AvicoSoft</span>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-emerald-600 transition-colors">À propos</a>
+                <a href="#features" class="text-gray-600 hover:text-emerald-600 transition-colors">Fonctionnalités</a>
+                <a href="#screenshots" class="text-gray-600 hover:text-emerald-600 transition-colors">Captures</a>
+                <a href="#pricing" class="text-gray-600 hover:text-emerald-600 transition-colors">Tarifs</a>
+                <a href="#faq" class="text-gray-600 hover:text-emerald-600 transition-colors">FAQ</a>
+                <a href="#contact" class="text-gray-600 hover:text-emerald-600 transition-colors">Contact</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZxKYEyJQk5on3j5F4U0oIgF_MVKPDBvrpNrNtGfqvHCGYJg/viewform?usp=dialog"
+                class="bg-gradient-to-r from-emerald-500 to-blue-500 text-white py-2 px-5 rounded-full shadow hover:shadow-lg transition-all">
+                Se connecter
+                </a>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <button class="md:hidden focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg px-4 py-4 space-y-3">
+            <a href="#about" class="block text-gray-600 hover:text-emerald-600">À propos</a>
+            <a href="#features" class="block text-gray-600 hover:text-emerald-600">Fonctionnalités</a>
+            <a href="#screenshots" class="block text-gray-600 hover:text-emerald-600">Captures</a>
+            <a href="#pricing" class="block text-gray-600 hover:text-emerald-600">Tarifs</a>
+            <a href="#faq" class="block text-gray-600 hover:text-emerald-600">FAQ</a>
+            <a href="#contact" class="block text-gray-600 hover:text-emerald-600">Contact</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZxKYEyJQk5on3j5F4U0oIgF_MVKPDBvrpNrNtGfqvHCGYJg/viewform?usp=dialog"
+            class="inline-block w-full text-center bg-gradient-to-r from-emerald-500 to-blue-500 text-white py-2 rounded-full shadow hover:shadow-lg transition-all">
+            Se connecter
+            </a>
+        </div>
+</header>
+
+    
+    <!-- Hero Section Améliorée -->
+    <section class="relative min-h-screen bg-center bg-cover pt-24 md:pt-32" 
+        style="background-image: url('static/images/section2.jpg');">
+        <!-- Overlay pour améliorer le contraste -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/5 to-black/10 backdrop-blur-sm"></div>
+
+        <div class="relative z-10 container mx-auto px-6 py-32 md:py-44">
+            <div class="max-w-3xl text-white animate-fade-in">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-xl">
+                    Simplifiez la gestion de votre ferme avicole et agricole
+                </h1>
+                <p class="text-lg md:text-2xl text-emerald-300 mb-10 drop-shadow">
+                    Optimisez vos performances grâce à des outils modernes et puissants pour l'aviculture et l'agriculture.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" 
+                    class="bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 text-lg font-semibold">
+                        Commencer gratuitement
+                    </a>
+                    <a href="#features" 
+                    class="bg-white/90 text-gray-800 px-8 py-4 rounded-xl border-2 border-gray-200 hover:border-emerald-500 transition-all duration-300 text-lg font-semibold">
+                        Voir les fonctionnalités
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+                                                              
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">À propos de AvicoSoft</h2>
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <p class="text-xl text-gray-600 mb-8">
+            <strong>AvicoSoft</strong> est une solution intelligente et complète de gestion de fermes avicoles et agricoles. Elle a été spécialement conçue pour accompagner les éleveurs et agriculteurs dans l’optimisation de leurs activités quotidiennes, en automatisant les tâches clés et en facilitant la prise de décision grâce à des outils d’intelligence artificielle innovants, développés en Guinée par une équipe de jeunes talents guinéens.
+            </p>
+
+            <p class="text-xl text-gray-600 mb-8">
+            Notre mission est claire : mettre la technologie au service de l’agriculture et de l’élevage en proposant des outils modernes, puissants et accessibles. Avec AvicoSoft, les exploitants peuvent gérer efficacement leurs élevages, suivre la santé des animaux, surveiller les cultures, améliorer la rentabilité et faire face aux défis du secteur avec plus de sérénité.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-center gap-3">
+                <div class="bg-emerald-100 p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <span>Simple à utiliser</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="bg-emerald-100 p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <span>Solution complète</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="bg-emerald-100 p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <span>Support 24/7</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="bg-emerald-100 p-2 rounded-full">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <span>Données sécurisées</span>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+                <img src="static/images/apropos.png" alt="À propos de nous" class="rounded-2xl shadow-xl">
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Fonctionnalités Clés</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="p-3 bg-gradient-to-r from-emerald-400 to-emerald-600 inline-flex rounded-lg text-white mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3v18h18"/>
+                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Gestion des Inventaires</h3>
+            <p class="text-gray-600">Suivez vos inventaires et assurez-vous de ne jamais manquer de fournitures essentielles.</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="p-3 bg-gradient-to-r from-blue-400 to-blue-600 inline-flex rounded-lg text-white mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Surveillance de la Santé</h3>
+            <p class="text-gray-600">Surveillez la santé de votre volaille et vos champs avec des alertes et des rapports en temps réel.</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="p-3 bg-gradient-to-r from-purple-400 to-purple-600 inline-flex rounded-lg text-white mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Analyses de Performance</h3>
+            <p class="text-gray-600">Obtenez des insights sur les performances de votre ferme et de vos champs avec des analyses détaillées.</p>
+          </div>
+          <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="p-3 bg-gradient-to-r from-amber-400 to-amber-600 inline-flex rounded-lg text-white mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3">Alertes Intelligentes</h3>
+            <p class="text-gray-600">Notifications instantanées pour les événements critiques et les anomalies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Voir AvicoSoft en Action</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="group overflow-hidden rounded-xl shadow-xl">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2000" alt="Dashboard" class="w-full transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-5 bg-white">
+              <h3 class="text-xl font-semibold mb-2">Tableau de bord intuitif</h3>
+              <p class="text-gray-600">Visualisez toutes vos données importantes en un coup d'œil.</p>
+            </div>
+          </div>
+          <div class="group overflow-hidden rounded-xl shadow-xl">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2000" alt="Analytics" class="w-full transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-5 bg-white">
+              <h3 class="text-xl font-semibold mb-2">Rapports détaillés</h3>
+              <p class="text-gray-600">Analysez vos performances avec des graphiques interactifs.</p>
+            </div>
+          </div>
+          <div class="group overflow-hidden rounded-xl shadow-xl">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=2000" alt="Mobile App" class="w-full transition-transform duration-500 group-hover:scale-110">
+            </div>
+            <div class="p-5 bg-white">
+              <h3 class="text-xl font-semibold mb-2">Application mobile</h3>
+              <p class="text-gray-600">Gérez votre ferme depuis n'importe où avec notre application mobile.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Ce que disent nos clients</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+            
+            <!-- Témoignage 1 -->
+            <div class="p-8 bg-white rounded-xl shadow-lg relative min-h-[350px] flex flex-col justify-between">
+                <div>
+                <div class="absolute -top-5 -left-5 bg-emerald-500 text-white p-3 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 11h2v5M10 8h2M19 4H5a2 2 0 00-2 2v13.6c0 .8.8 1.3 1.5 1l4.8-2.9a2 2 0 011.7 0l4.8 2.9c.7.3 1.5-.2 1.5-1V6a2 2 0 00-2-2z"/>
+                    </svg>
+                </div>
+                <div class="flex items-center mb-6 mt-4">
+                    <div class="w-16 h-16 rounded-full mr-4 bg-emerald-500 flex items-center justify-center text-white text-xl font-bold">
+                    MD
+                    </div>
+                    <div>
+                    <h4 class="font-semibold text-lg">Mamadou Diallo</h4>
+                    <p class="text-gray-600">Propriétaire de ferme</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "AvicoSoft a révolutionné la manière dont nous gérons notre ferme. Les fonctionnalités faciles à utiliser et les analyses puissantes nous ont aidés à rationaliser les opérations et à augmenter la productivité."
+                </p>
+                </div>
+            </div>
+
+            <!-- Témoignage 2 -->
+            <div class="p-8 bg-white rounded-xl shadow-lg relative min-h-[350px] flex flex-col justify-between">
+                <div>
+                <div class="absolute -top-5 -left-5 bg-blue-500 text-white p-3 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 11h2v5M10 8h2M19 4H5a2 2 0 00-2 2v13.6c0 .8.8 1.3 1.5 1l4.8-2.9a2 2 0 011.7 0l4.8 2.9c.7.3 1.5-.2 1.5-1V6a2 2 0 00-2-2z"/>
+                    </svg>
+                </div>
+                <div class="flex items-center mb-6 mt-4">
+                    <div class="w-16 h-16 rounded-full mr-4 bg-blue-500 flex items-center justify-center text-white text-xl font-bold">
+                    SK
+                    </div>
+                    <div>
+                    <h4 class="font-semibold text-lg">Saran Kouyaté</h4>
+                    <p class="text-gray-600">Responsable des opérations</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "Les fonctionnalités de surveillance de la santé nous donnent la tranquillité d'esprit de savoir que notre volaille est toujours prise en charge. Fortement recommandé !"
+                </p>
+                </div>
+            </div>
+
+            <!-- Témoignage 3 -->
+            <div class="p-8 bg-white rounded-xl shadow-lg relative min-h-[350px] flex flex-col justify-between">
+                <div>
+                <div class="absolute -top-5 -left-5 bg-purple-500 text-white p-3 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 11h2v5M10 8h2M19 4H5a2 2 0 00-2 2v13.6c0 .8.8 1.3 1.5 1l4.8-2.9a2 2 0 011.7 0l4.8 2.9c.7.3 1.5-.2 1.5-1V6a2 2 0 00-2-2z"/>
+                    </svg>
+                </div>
+                <div class="flex items-center mb-6 mt-4">
+                    <div class="w-16 h-16 rounded-full mr-4 bg-purple-500 flex items-center justify-center text-white text-xl font-bold">
+                    MT
+                    </div>
+                    <div>
+                    <h4 class="font-semibold text-lg">Moussa Traoré</h4>
+                    <p class="text-gray-600">Gestionnaire de ferme</p>
+                    </div>
+                </div>
+                <p class="text-gray-600 italic">
+                    "Le système de gestion des inventaires a rationalisé nos opérations. Nous avons réduit les déchets et amélioré notre résultat net de manière significative."
+                </p>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+
+
+    <section id="pricing" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Tarifs Simples et Transparents</h2>
+        <p class="text-xl text-center text-gray-600 mb-12">Choisissez le plan qui convient le mieux à votre exploitation</p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 relative">
+            <h3 class="text-2xl font-bold mb-4">Débutant</h3>
+            <div class="text-4xl font-bold mb-6">150 000GNF<span class="text-lg text-gray-600">/mois</span></div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Jusqu'à 5,000 oiseaux</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Analyses de base</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Gestion des stocks</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Support par email</span>
+              </li>
+            </ul>
+            <button class="w-full bg-gradient-to-r from-emerald-400 to-emerald-600 text-white py-3 rounded-xl hover:shadow-lg transition-all">Choisir ce plan</button>
+          </div>
+          <div class="p-8 bg-gradient-to-b from-white to-emerald-50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform scale-105 border border-emerald-200 relative">
+            <div class="absolute -top-4 right-8 bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-1 rounded-full shadow-lg">Populaire</div>
+            <h3 class="text-2xl font-bold mb-4">Professionnel</h3>
+            <div class="text-4xl font-bold mb-6">590 000GNF<span class="text-lg text-gray-600">/mois</span></div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Jusqu'à 20,000 oiseaux</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Analyses avancées</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Support 24/7</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Accès API</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Assistance IA</span>
+              </li>
+            </ul>
+            <button class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-3 rounded-xl shadow-lg hover:shadow-xl transition-all">Choisir ce plan</button>
+          </div>
+          <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 relative">
+            <h3 class="text-2xl font-bold mb-4">Entreprise</h3>
+            <div class="text-4xl font-bold mb-6">1 045 000GNF<span class="text-lg text-gray-600">/mois</span></div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Nombre illimité d'oiseaux</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Solutions personnalisées</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Gestionnaire dédié</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Options de marque blanche</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-emerald-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Automatisation des tâches</span>
+              </li>
+            </ul>
+            <button class="w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white py-3 rounded-xl hover:shadow-lg transition-all">Contacter les ventes</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--faq questions-->
+    <section id="faq" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Questions Fréquentes</h2>
+        <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <h3 class="text-xl font-semibold mb-3">Comment puis-je commencer avec AvicoSoft ?</h3>
+            <p class="text-gray-600">Pour commencer avec AvicoSoft, il vous suffit de vous inscrire sur notre plateforme et de suivre les instructions pour configurer votre compte. Vous pouvez commencer gratuitement et explorer les fonctionnalités avant de choisir un plan.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <h3 class="text-xl font-semibold mb-3">Quels sont les avantages d'utiliser AvicoSoft ?</h3>
+            <p class="text-gray-600">AvicoSoft offre une gestion simplifiée des inventaires, une surveillance en temps réel de la santé de votre volaille, des analyses de performance détaillées, et des alertes intelligentes pour les événements critiques.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <h3 class="text-xl font-semibold mb-3">Puis-je essayer AvicoSoft gratuitement ?</h3>
+            <p class="text-gray-600">Oui, vous pouvez essayer AvicoSoft gratuitement en vous inscrivant sur notre plateforme. Nous offrons une période d'essai gratuite pour vous permettre d'explorer toutes les fonctionnalités avant de choisir un plan.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all">
+            <h3 class="text-xl font-semibold mb-3">Est-ce que mes données sont sécurisées ?</h3>
+            <p class="text-gray-600">Absolument. La sécurité des données est notre priorité. Nous utilisons un cryptage de niveau bancaire et des centres de données sécurisés pour protéger toutes vos informations.</p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Contactez-nous</h2>
+            <p class="text-xl text-center text-gray-600 mb-12">Nous sommes là pour répondre à toutes vos questions</p>
+            <div class="max-w-3xl mx-auto bg-gradient-to-r from-emerald-50 to-teal-50 p-12 rounded-2xl shadow-lg">
+            <form class="space-y-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <label class="block text-gray-700 font-medium mb-3" for="name">Nom</label>
+                    <input type="text" id="name" class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-medium mb-3" for="email">Email</label>
+                    <input type="email" id="email" class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+                </div>
+                </div>
+                <div class="mt-8">
+                <label class="block text-gray-700 font-medium mb-3" for="subject">Sujet</label>
+                <input type="text" id="subject" class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent">
+                </div>
+                <div class="mt-8">
+                <label class="block text-gray-700 font-medium mb-3" for="message">Message</label>
+                <textarea id="message" rows="6" class="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent"></textarea>
+                </div>
+                <a href='https://docs.google.com/forms/d/e/1FAIpQLSdZxKYEyJQk5on3j5F4U0oIgF_MVKPDBvrpNrNtGfqvHCGYJg/viewform?usp=dialog' class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-4 rounded-xl font-medium hover:shadow-lg transition-all text-center inline-block mt-8">Envoyer le message</a>
+            </form>
+            </div>
+        </div>
+    </section>
+    <!-- Chatbot Widget -->
+    <div class="fixed bottom-6 right-6 z-50">
+    <!-- Toggle Button -->
+    <button id="chatbot-toggle" class="bg-emerald-600 text-white p-3 rounded-full shadow-lg hover:bg-emerald-700 transition">
+        💬
+    </button>
+
+    <!-- Chat Window -->
+    <div id="chatbot-window" class="hidden w-80 bg-white rounded-xl shadow-xl mt-3 overflow-hidden border border-gray-200">
+        <div class="bg-emerald-600 text-white text-center py-3 font-semibold">Chatbot AvicoSoft</div>
+        <div id="chat-log" class="h-64 p-3 overflow-y-auto space-y-2 text-sm text-gray-800"></div>
+        <div class="border-t border-gray-200 p-3">
+        <input id="chat-input" type="text" placeholder="Posez une question…" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        </div>
+    </div>
+    </div>
+
+        <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center space-x-2 mb-6">
+              <div class="bg-gradient-to-r from-emerald-500 to-blue-500 p-1.5 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+              <span class="text-xl font-bold">AvicoSoft</span>
+            </div>
+            <p class="text-gray-400 mb-6">Donner du pouvoir aux éleveurs de volailles et aux agriculteurs avec des solutions de gestion intelligentes.</p>
+            <div class="flex space-x-4">
+              <a href="https://www.facebook.com/share/p/16HPaBmQNo/" class="bg-gray-800 p-2 rounded-full hover:bg-emerald-600 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              
+              <a href="https://fr.linkedin.com/posts/foula-fofana-1769782a5_afrinovtechexpo-innovation-entrepreneuriat-activity-7296810968150388736-Gxpt" class="bg-gray-800 p-2 rounded-full hover:bg-emerald-600 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Liens Rapides</h4>
+            <ul class="space-y-3">
+              <li><a href="#about" class="text-gray-400 hover:text-emerald-400 transition-colors">À propos</a></li>
+              <li><a href="#features" class="text-gray-400 hover:text-emerald-400 transition-colors">Fonctionnalités</a></li>
+              <li><a href="#pricing" class="text-gray-400 hover:text-emerald-400 transition-colors">Tarifs</a></li>
+              <li><a href="#contact" class="text-gray-400 hover:text-emerald-400 transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Légal</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Politique de confidentialité</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Conditions d'utilisation</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Mentions légales</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Cookies</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Contactez-nous</h4>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span class="text-gray-400">Ratoma, Conakry</span>
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span class="text-gray-400">+224 624 36 60 64</span>
+              </li>
+              <li class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span class="text-gray-400">contact@avicosoft.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 AvicoSoft Poultry Farm Management. Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      });
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+      
+      // Mobile menu toggle
+      const mobileMenuButton = document.querySelector('.md\\:hidden');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+      
+      // Add animations on scroll
+      const animateElements = document.querySelectorAll('.fade-in');
+      
+      function checkIfInView() {
+        animateElements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementTop < windowHeight - 100) {
+            element.style.opacity = "1";
+            element.style.transform = "translateY(0)";
+          }
+        });
+      }
+      
+      // Run on page load
+      checkIfInView();
+      
+      // Run on scroll
+      window.addEventListener('scroll', checkIfInView);
+    </script>
+<script>
+  const toggle = document.getElementById("chatbot-toggle");
+  const chatbot = document.getElementById("chatbot-window");
+  const input = document.getElementById("chat-input");
+  const chatLog = document.getElementById("chat-log");
+
+  let isFirstOpen = true;
+
+  toggle.addEventListener("click", () => {
+    chatbot.classList.toggle("hidden");
+
+    // Affiche le message de bienvenue uniquement la première fois
+    if (!chatbot.classList.contains("hidden") && isFirstOpen) {
+      chatLog.innerHTML += `<div class="text-emerald-600"><strong>AvicoBot :</strong> Bonjour 👋, comment allez-vous ? Je suis AvicoBot, posez-moi votre question.</div>`;
+      isFirstOpen = false;
+    }
+  });
+
+  const faqs = {
+    "qu'est-ce qu'avicosoft": "AvicoSoft est une plateforme de gestion de ferme avicole et agricole développée en Guinée.",
+    "comment s'inscrire": "Vous pouvez vous inscrire via le bouton 'Se connecter' en haut de la page.",
+    "quelles sont les fonctionnalités": "Suivi des volailles, gestion des champs, alertes IA, analyses sanitaires, et bien plus.",
+    "où est basé avicosoft": "AvicoSoft est conçu et développé en Guinée par de jeunes ingénieurs.",
+    "est-ce que c'est gratuit": "Une version gratuite est disponible avec des fonctionnalités limitées. D'autres offres sont disponibles dans la section Tarifs."
+  };
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && input.value.trim() !== "") {
+      const question = input.value.trim().toLowerCase();
+      chatLog.innerHTML += `<div><strong>Vous :</strong> ${input.value}</div>`;
+      input.value = "";
+
+      let answer = "Désolé, je n’ai pas compris. Vous pouvez consulter la section FAQ.";
+      for (const key in faqs) {
+        if (question.includes(key)) {
+          answer = faqs[key];
+          break;
+        }
+      }
+
+      setTimeout(() => {
+        chatLog.innerHTML += `<div class="text-emerald-600"><strong>AvicoBot :</strong> ${answer}</div>`;
+        chatLog.scrollTop = chatLog.scrollHeight;
+      }, 500);
+    }
+  });
+</script>
+
+
+  </body>
+</html>
+
